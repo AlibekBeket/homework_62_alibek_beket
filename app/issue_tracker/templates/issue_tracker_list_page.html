@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Issue Tracker List{% endblock %}
+{% block navbar_logo %}
+<a href="{% url 'project_detail' project.id %}">{{ project.name }}</a>
+{% endblock %}
+{% block navbar %}
+<a href="{% url 'project_detail' project.id %}">Issue List</a>
+{% if user.is_authenticated %}
+<a href="{% url 'project_issue_add' project.id %}">Add Issue</a>
+<a href="{% url 'project_delete' project.id %}">Delete Project</a>
+{% endif %}
+{% endblock %}
+<h1>{{ project.name }}</h1>
+{% block content %}
+<form class="search_form" action="{% url 'project_detail' project.id %}" method="get">
+{% include 'partials/search.html' with button_text="Find" %}
+</form>
+{% for issue in issues %}
+<div class="issue_info">
+    <p><a href="{% url 'project_issue_detail' project.id issue.pk %}">{{ issue.summary }}</a></p>
+    <p>Type:
+        {% for type in issue.type.all %}
+        {{ type.type_name }}
+        {% endfor %}
+    </p>
+    <p>Status: {{ issue.status.status_name }}</p>
+</div>
+{% endfor %}
+{% if is_paginated %}
+{% include 'partials/pagination.html' %}
+{% endif %}
+{% if 404_error %}
+<div class="issue_not_found">
+    <p>Задачи не найдены</p>
+</div>
+{% endif %}
+<div class="bottom_indent"></div>
+{% endblock %}

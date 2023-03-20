@@ -1,0 +1,934 @@
+[
+{
+  "model": "issue_tracker.status",
+  "pk": 1,
+  "fields": {
+    "status_name": "New"
+  }
+},
+{
+  "model": "issue_tracker.status",
+  "pk": 2,
+  "fields": {
+    "status_name": "In Progress"
+  }
+},
+{
+  "model": "issue_tracker.status",
+  "pk": 3,
+  "fields": {
+    "status_name": "Done"
+  }
+},
+{
+  "model": "issue_tracker.type",
+  "pk": 1,
+  "fields": {
+    "type_name": "Task"
+  }
+},
+{
+  "model": "issue_tracker.type",
+  "pk": 2,
+  "fields": {
+    "type_name": "Bug"
+  }
+},
+{
+  "model": "issue_tracker.type",
+  "pk": 3,
+  "fields": {
+    "type_name": "Enhancement"
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 2,
+  "fields": {
+    "name": "Issue Tracker",
+    "description": "Django project Issue Tracker",
+    "start_date": "2023-01-01",
+    "end_date": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 3,
+  "fields": {
+    "name": "Mobile",
+    "description": "Hello world",
+    "start_date": "2021-02-03",
+    "end_date": "2026-02-03",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 4,
+  "fields": {
+    "name": "Heloo",
+    "description": "fdhdgfh",
+    "start_date": "2023-11-02",
+    "end_date": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 5,
+  "fields": {
+    "name": "Heloo",
+    "description": "fdhdgfh",
+    "start_date": "2023-11-02",
+    "end_date": "2026-02-03",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 6,
+  "fields": {
+    "name": "Miisadgfd",
+    "description": "fgdjgfhjfg",
+    "start_date": "2023-11-02",
+    "end_date": "2026-02-03",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 7,
+  "fields": {
+    "name": "dhd",
+    "description": "ygkfgkjh",
+    "start_date": "2023-11-02",
+    "end_date": "2026-02-03",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 8,
+  "fields": {
+    "name": "dafvcbmdjytrghkf",
+    "description": "fdshgfjfgh",
+    "start_date": "2023-11-02",
+    "end_date": "2026-02-03",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 1,
+  "fields": {
+    "summary": "Adding random user selection functionality",
+    "description": "Hello World Main",
+    "status": 1,
+    "created_at": "2023-03-03T10:04:06.448Z",
+    "updated_at": "2023-03-10T11:00:13.686Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 2,
+  "fields": {
+    "summary": "Fix a bug in which unnecessary data is displayed",
+    "description": "Advertisers study how people learn so that they can 'teach' them to respond to their advertising. They want us to be interested, to try something, and then to do it again. These are the elements of learning: interest, experience and repetition.",
+    "status": 3,
+    "created_at": "2023-03-03T10:06:07.270Z",
+    "updated_at": "2023-03-03T11:23:10.071Z",
+    "project": 2,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 4,
+  "fields": {
+    "summary": "Styling the home page",
+    "description": "",
+    "status": 2,
+    "created_at": "2023-03-03T10:06:33.754Z",
+    "updated_at": "2023-03-03T11:43:51.927Z",
+    "project": 2,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 5,
+  "fields": {
+    "summary": "Add new statuses for tasks",
+    "description": "Advertisers study how people learn so that they can 'teach' them to respond to their advertising. They want us to be interested, to try something, and then to do it again. These are the elements of learning: interest, experience and repetition.",
+    "status": 3,
+    "created_at": "2023-03-03T10:06:49.849Z",
+    "updated_at": "2023-03-03T10:06:49.849Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 12,
+  "fields": {
+    "summary": "Summery",
+    "description": "Summery",
+    "status": 1,
+    "created_at": "2023-03-03T13:38:12.638Z",
+    "updated_at": "2023-03-07T04:21:17.189Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 15,
+  "fields": {
+    "summary": "Make a logo rebranding",
+    "description": "Issue Tracker rebranding",
+    "status": 1,
+    "created_at": "2023-03-07T04:24:40.976Z",
+    "updated_at": "2023-03-07T04:24:40.976Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 16,
+  "fields": {
+    "summary": "The function of correspondence with other developers",
+    "description": "Chat",
+    "status": 3,
+    "created_at": "2023-03-07T04:27:37.703Z",
+    "updated_at": "2023-03-07T04:27:37.703Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 17,
+  "fields": {
+    "summary": "Fix bug of pressed button",
+    "description": "",
+    "status": 2,
+    "created_at": "2023-03-07T04:29:53.943Z",
+    "updated_at": "2023-03-07T04:29:53.943Z",
+    "project": 2,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 18,
+  "fields": {
+    "summary": "Fly to America",
+    "description": "Fly to America to sign a contract.",
+    "status": 2,
+    "created_at": "2023-03-07T12:12:06.305Z",
+    "updated_at": "2023-03-10T05:55:43.100Z",
+    "project": 2,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 20,
+  "fields": {
+    "summary": "Create a new server in Kazakhstan",
+    "description": "Create a new server in Kazakhstan",
+    "status": 2,
+    "created_at": "2023-03-07T12:14:32.345Z",
+    "updated_at": "2023-03-10T11:08:13.349Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 21,
+  "fields": {
+    "summary": "Improve the appearance of the site",
+    "description": "",
+    "status": 2,
+    "created_at": "2023-03-07T12:15:28.672Z",
+    "updated_at": "2023-03-07T12:15:28.672Z",
+    "project": 2,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 22,
+  "fields": {
+    "summary": "Create a new comment table",
+    "description": "Create a new comment table for clients.",
+    "status": 3,
+    "created_at": "2023-03-07T12:16:30.125Z",
+    "updated_at": "2023-03-07T12:18:42.033Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 23,
+  "fields": {
+    "summary": "Create a new comment page",
+    "description": "Create a new comment page",
+    "status": 2,
+    "created_at": "2023-03-07T12:17:23.364Z",
+    "updated_at": "2023-03-07T12:19:21.187Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 24,
+  "fields": {
+    "summary": "Make the appearance of the page with comments more simple and convenient",
+    "description": "Make the appearance of the page with comments more simple and convenient",
+    "status": 1,
+    "created_at": "2023-03-07T12:18:10.206Z",
+    "updated_at": "2023-03-07T12:19:03.670Z",
+    "project": 2,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 37,
+  "fields": {
+    "summary": "Sumsung create",
+    "description": "",
+    "status": 1,
+    "created_at": "2023-03-10T11:38:00.359Z",
+    "updated_at": "2023-03-10T11:38:00.359Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 38,
+  "fields": {
+    "summary": "Hello World",
+    "description": "sddfshs",
+    "status": 2,
+    "created_at": "2023-03-10T11:39:07.437Z",
+    "updated_at": "2023-03-10T11:39:07.437Z",
+    "project": 2,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 39,
+  "fields": {
+    "summary": "Ali",
+    "description": "fsdhgf",
+    "status": 1,
+    "created_at": "2023-03-10T11:46:44.480Z",
+    "updated_at": "2023-03-10T11:46:44.480Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 40,
+  "fields": {
+    "summary": "Ali",
+    "description": "fsdhgf",
+    "status": 1,
+    "created_at": "2023-03-10T11:47:55.743Z",
+    "updated_at": "2023-03-10T11:47:55.743Z",
+    "project": 2,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 41,
+  "fields": {
+    "summary": "sdfghgdf",
+    "description": "gfsjdghjf",
+    "status": 1,
+    "created_at": "2023-03-10T11:52:56.577Z",
+    "updated_at": "2023-03-10T11:52:56.577Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 42,
+  "fields": {
+    "summary": "gfdjhgjkfgh",
+    "description": "fhgkhjkg",
+    "status": 1,
+    "created_at": "2023-03-10T11:53:33.577Z",
+    "updated_at": "2023-03-10T11:53:33.577Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 43,
+  "fields": {
+    "summary": "dfhsgdfjhfg",
+    "description": "fghkfhjkghj",
+    "status": 1,
+    "created_at": "2023-03-10T11:54:36.872Z",
+    "updated_at": "2023-03-10T11:54:36.872Z",
+    "project": 2,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 44,
+  "fields": {
+    "summary": "dfhsdgfjhf",
+    "description": "hgkhjgkgjh",
+    "status": 1,
+    "created_at": "2023-03-10T11:55:38.912Z",
+    "updated_at": "2023-03-10T11:55:38.912Z",
+    "project": 2,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 47,
+  "fields": {
+    "summary": "dshgdfgj",
+    "description": "hgkfhjgkgjhl",
+    "status": 1,
+    "created_at": "2023-03-10T11:57:04.604Z",
+    "updated_at": "2023-03-10T11:57:04.612Z",
+    "project": 3,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 48,
+  "fields": {
+    "summary": "fdsgjdgfhjhf",
+    "description": "fhkyjufhgk",
+    "status": 2,
+    "created_at": "2023-03-10T11:57:44.172Z",
+    "updated_at": "2023-03-10T11:57:44.180Z",
+    "project": 3,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 50,
+  "fields": {
+    "summary": "gfhjgfjh",
+    "description": "ghkfgkgjh",
+    "status": 2,
+    "created_at": "2023-03-10T12:01:19.390Z",
+    "updated_at": "2023-03-10T12:01:19.400Z",
+    "project": 3,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 51,
+  "fields": {
+    "summary": "gfhjgfjhdsgfdh",
+    "description": "ghkfgkgjhgfdjfghk",
+    "status": 1,
+    "created_at": "2023-03-10T12:03:25.619Z",
+    "updated_at": "2023-03-10T12:03:25.619Z",
+    "project": 2,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 52,
+  "fields": {
+    "summary": "gdfjhgfdjgdf",
+    "description": "ghfjgfhjhdgf",
+    "status": 1,
+    "created_at": "2023-03-10T12:04:10.917Z",
+    "updated_at": "2023-03-10T12:07:18.752Z",
+    "project": 3,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 53,
+  "fields": {
+    "summary": "fdhsdfghdgfjhg",
+    "description": "hgfkhgjkghj",
+    "status": 1,
+    "created_at": "2023-03-10T12:04:58.838Z",
+    "updated_at": "2023-03-10T12:04:58.848Z",
+    "project": 3,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "issue_tracker.issue",
+  "pk": 54,
+  "fields": {
+    "summary": "HEllo world",
+    "description": "gfghfjghfkghkjh",
+    "status": 2,
+    "created_at": "2023-03-10T12:05:58.196Z",
+    "updated_at": "2023-03-10T12:07:34.958Z",
+    "project": 3,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add status",
+    "content_type": 7,
+    "codename": "add_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change status",
+    "content_type": 7,
+    "codename": "change_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete status",
+    "content_type": 7,
+    "codename": "delete_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view status",
+    "content_type": 7,
+    "codename": "view_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add type",
+    "content_type": 8,
+    "codename": "add_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change type",
+    "content_type": 8,
+    "codename": "change_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete type",
+    "content_type": 8,
+    "codename": "delete_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view type",
+    "content_type": 8,
+    "codename": "view_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add issue",
+    "content_type": 9,
+    "codename": "add_issue"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change issue",
+    "content_type": 9,
+    "codename": "change_issue"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete issue",
+    "content_type": 9,
+    "codename": "delete_issue"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view issue",
+    "content_type": 9,
+    "codename": "view_issue"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add project",
+    "content_type": 10,
+    "codename": "add_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change project",
+    "content_type": 10,
+    "codename": "change_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete project",
+    "content_type": 10,
+    "codename": "delete_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view project",
+    "content_type": 10,
+    "codename": "view_project"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ynglila6VDRg03LgZjushb$NU0dGzcZuKQ6bIaHOgW0+raZAY/cOG9tVah6hr/QhAI=",
+    "last_login": "2023-03-03T10:02:50.093Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-03-03T10:02:37.132Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

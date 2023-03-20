@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <ul class="menu logo">
+            <li>
+                <a href="{% url 'projects_list' %}">Projects</a>
+                {% block navbar_logo %}{% endblock %}
+            </li>
+        </ul>
+        <ul class="menu link">
+            <li>
+                {% block navbar %}{% endblock %}
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <input class="button_login" type="submit" value="выйти">
+                </form>
+            </li>
+            {% else %}
+            <li>
+                <a href="{% url 'login' %}">Войти</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

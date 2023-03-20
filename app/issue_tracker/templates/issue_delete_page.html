@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Delete Issue{% endblock %}
+{% block navbar_logo %}
+<a href="{% url 'project_detail' issue.project.id %}">{{ issue.project.name }}</a>
+{% endblock %}
+{% block navbar %}
+<a href="{% url 'project_detail' issue.project.id %}">Issue List</a>
+<a href="{% url 'project_issue_add' issue.project.id %}">Add Issue</a>
+<a href="{% url 'project_issue_update' issue.project.id issue.pk %}">Update Issue</a>
+{% endblock %}
+{% block content %}
+<h1>Delete Issue</h1>
+<div class="issue_detail_info">
+    <p>Issue summary: <span>{{ issue.summary }}</span></p>
+    <p>Description: <span>{{ issue.description }}</span></p>
+    <p>Type:
+        <span>
+        {% for type in issue.type.all %}
+        {{ type.type_name }}
+        {% endfor %}
+        </span>
+    </p>
+    <p>Status: <span>{{ issue.status.status_name }}</span></p>
+    <p>Created: <span>{{ issue.created_at }} tg</span></p>
+</div>
+<h3 class="delete_text">Are you sure you want to delete this issue?</h3>
+<div class="delete_form_block">
+    <div class="form_yes">
+        <form action="{% url 'project_issue_delete' issue.project.id issue.pk %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Yes">
+        </form>
+    </div>
+    <div class="form_no">
+        <form action="{% url 'project_detail' issue.project.id %}" method="get">
+            {% csrf_token %}
+            <input type="submit" value="No">
+        </form>
+    </div>
+</div>
+{% endblock %}
