@@ -1,4 +1,4 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -56,19 +56,25 @@ class IssueDetailView(DetailView):
     model = Issue
 
 
-class IssueUpdateView(LoginRequiredMixin, UpdateView):
+class IssueUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
     template_name = 'issue_update_page.html'
     form_class = IssueForm
     model = Issue
+    groups = ['Project Manager', 'Team Lead', 'Developer']
 
     def get_success_url(self):
         return reverse('project_issue_detail', kwargs={'project_pk': self.object.project.pk, 'pk': self.object.pk})
 
+    def test_func(self):
+        return self.request.user.groups.filter(
+            name__in=self.groups).exists() and self.request.user in Project.objects.get(id=self.kwargs['project_pk']).user.all()
 
-class IssueAddView(LoginRequiredMixin, CreateView):
+
+class IssueAddView(UserPassesTestMixin, LoginRequiredMixin, CreateView):
     template_name = 'issue_create_page.html'
     model = Issue
     form_class = IssueForm
+    groups = ['Project Manager', 'Team Lead', 'Developer']
 
     def get(self, request, *args, **kwargs):
         self.project_pk = kwargs['project_pk']
@@ -92,10 +98,19 @@ class IssueAddView(LoginRequiredMixin, CreateView):
         return render(request, 'issue_create_page.html',
                       context={'form': form, 'project': Project.objects.get(id=kwargs['project_pk'])})
 
+    def test_func(self):
+        return self.request.user.groups.filter(
+            name__in=self.groups).exists() and self.request.user in Project.objects.get(id=self.kwargs['project_pk']).user.all()
 
-class IssueDeleteView(LoginRequiredMixin, DeleteView):
+
+class IssueDeleteView(UserPassesTestMixin, LoginRequiredMixin, DeleteView):
     template_name = 'issue_delete_page.html'
     model = Issue
+    groups = ['Project Manager', 'Team Lead']
 
     def get_success_url(self):
         return reverse('project_detail', kwargs={'project_pk': self.object.project.pk})
+
+    def test_func(self):
+        return self.request.user.groups.filter(
+            name__in=self.groups).exists() and self.request.user in Project.objects.get(id=self.kwargs['project_pk']).user.all()
