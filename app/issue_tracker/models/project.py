@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 
 
@@ -28,6 +29,12 @@ class Project(models.Model):
         verbose_name="Удалено",
         null=False,
         default=False
+    )
+    user = models.ManyToManyField(
+        to=get_user_model(),
+        related_name='user',
+        verbose_name='Пользователь',
+        blank=True
     )
 
     def __str__(self):
