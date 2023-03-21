@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Регистрация</h1>
-<form action="{% url 'login' %}" method="post" class="login_input">
+<form action="{% url 'register' %}" method="post" class="login_input">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="button_login">Зарегистрироваться</button>
