@@ -66,3 +66,12 @@ class ProjectForm(forms.ModelForm):
             'end_date': 'Конец проекта',
             'user': 'Пользователи'
         }
+
+
+class ProjectUserForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ('user',)
+        labels = {
+            'user': 'Пользователи'
+        }

@@ -8,6 +8,7 @@
 {% if user.is_authenticated %}
 <a href="{% url 'project_issue_add' project.id %}">Add Issue</a>
 <a href="{% url 'project_delete' project.id %}">Delete Project</a>
+<a href="{% url 'project_user_update' project.id %}">User Update</a>
 {% endif %}
 {% endblock %}
 <h1>{{ project.name }}</h1>
