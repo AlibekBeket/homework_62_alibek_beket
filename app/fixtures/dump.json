@@ -49,7 +49,10 @@
     "description": "Django project Issue Tracker",
     "start_date": "2023-01-01",
     "end_date": null,
-    "is_deleted": false
+    "is_deleted": false,
+    "user": [
+      1
+    ]
   }
 },
 {
@@ -60,7 +63,8 @@
     "description": "Hello world",
     "start_date": "2021-02-03",
     "end_date": "2026-02-03",
-    "is_deleted": false
+    "is_deleted": false,
+    "user": []
   }
 },
 {
@@ -71,7 +75,8 @@
     "description": "fdhdgfh",
     "start_date": "2023-11-02",
     "end_date": null,
-    "is_deleted": false
+    "is_deleted": false,
+    "user": []
   }
 },
 {
@@ -82,7 +87,8 @@
     "description": "fdhdgfh",
     "start_date": "2023-11-02",
     "end_date": "2026-02-03",
-    "is_deleted": false
+    "is_deleted": false,
+    "user": []
   }
 },
 {
@@ -93,7 +99,8 @@
     "description": "fgdjgfhjfg",
     "start_date": "2023-11-02",
     "end_date": "2026-02-03",
-    "is_deleted": false
+    "is_deleted": false,
+    "user": []
   }
 },
 {
@@ -104,7 +111,8 @@
     "description": "ygkfgkjh",
     "start_date": "2023-11-02",
     "end_date": "2026-02-03",
-    "is_deleted": false
+    "is_deleted": false,
+    "user": []
   }
 },
 {
@@ -115,7 +123,51 @@
     "description": "fdshgfjfgh",
     "start_date": "2023-11-02",
     "end_date": "2026-02-03",
-    "is_deleted": false
+    "is_deleted": true,
+    "user": []
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 9,
+  "fields": {
+    "name": "dsfhg",
+    "description": "fgdjhgf",
+    "start_date": "2023-11-02",
+    "end_date": null,
+    "is_deleted": false,
+    "user": []
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 10,
+  "fields": {
+    "name": "Hello world",
+    "description": "Hello",
+    "start_date": "2023-11-05",
+    "end_date": null,
+    "is_deleted": false,
+    "user": [
+      1
+    ]
+  }
+},
+{
+  "model": "issue_tracker.project",
+  "pk": 11,
+  "fields": {
+    "name": "Heeellldasd",
+    "description": "fhgfdhdfjgfh",
+    "start_date": "2020-11-02",
+    "end_date": null,
+    "is_deleted": false,
+    "user": [
+      1,
+      3,
+      4,
+      5
+    ]
   }
 },
 {
@@ -495,21 +547,6 @@
 },
 {
   "model": "issue_tracker.issue",
-  "pk": 51,
-  "fields": {
-    "summary": "gfhjgfjhdsgfdh",
-    "description": "ghkfgkgjhgfdjfghk",
-    "status": 1,
-    "created_at": "2023-03-10T12:03:25.619Z",
-    "updated_at": "2023-03-10T12:03:25.619Z",
-    "project": 2,
-    "type": [
-      1
-    ]
-  }
-},
-{
-  "model": "issue_tracker.issue",
   "pk": 52,
   "fields": {
     "summary": "gdfjhgfdjgdf",
@@ -554,381 +591,256 @@
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 1,
+  "model": "issue_tracker.issue",
+  "pk": 55,
   "fields": {
-    "name": "Can add log entry",
-    "content_type": 1,
-    "codename": "add_logentry"
+    "summary": "Hello Worldsas",
+    "description": "sdahfdshgf",
+    "status": 1,
+    "created_at": "2023-03-17T09:09:41.917Z",
+    "updated_at": "2023-03-17T09:10:46.085Z",
+    "project": 2,
+    "type": [
+      2
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 2,
+  "model": "issue_tracker.issue",
+  "pk": 56,
   "fields": {
-    "name": "Can change log entry",
-    "content_type": 1,
-    "codename": "change_logentry"
+    "summary": "whtdsgf",
+    "description": "ghkjhkf",
+    "status": 1,
+    "created_at": "2023-03-17T09:12:26.029Z",
+    "updated_at": "2023-03-17T09:12:26.038Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 3,
+  "model": "issue_tracker.issue",
+  "pk": 57,
   "fields": {
-    "name": "Can delete log entry",
-    "content_type": 1,
-    "codename": "delete_logentry"
+    "summary": "whtdsgf",
+    "description": "ghkjhkf",
+    "status": 1,
+    "created_at": "2023-03-17T09:14:31.056Z",
+    "updated_at": "2023-03-17T09:14:31.065Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 4,
+  "model": "issue_tracker.issue",
+  "pk": 58,
   "fields": {
-    "name": "Can view log entry",
-    "content_type": 1,
-    "codename": "view_logentry"
+    "summary": "whtdsgf",
+    "description": "ghkjhkf",
+    "status": 1,
+    "created_at": "2023-03-17T09:14:32.895Z",
+    "updated_at": "2023-03-17T09:14:32.911Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 5,
+  "model": "issue_tracker.issue",
+  "pk": 59,
   "fields": {
-    "name": "Can add permission",
-    "content_type": 2,
-    "codename": "add_permission"
+    "summary": "adsg",
+    "description": "dfdsh",
+    "status": 2,
+    "created_at": "2023-03-17T09:17:52.308Z",
+    "updated_at": "2023-03-17T09:17:52.317Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 6,
+  "model": "issue_tracker.issue",
+  "pk": 60,
   "fields": {
-    "name": "Can change permission",
-    "content_type": 2,
-    "codename": "change_permission"
+    "summary": "agsfdadsg",
+    "description": "dfdsh",
+    "status": 2,
+    "created_at": "2023-03-17T09:21:24.041Z",
+    "updated_at": "2023-03-17T09:21:24.046Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 7,
+  "model": "issue_tracker.issue",
+  "pk": 61,
   "fields": {
-    "name": "Can delete permission",
-    "content_type": 2,
-    "codename": "delete_permission"
+    "summary": "agsfdadsgadfa",
+    "description": "dfdsh",
+    "status": 2,
+    "created_at": "2023-03-17T09:22:12.102Z",
+    "updated_at": "2023-03-17T09:22:12.112Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 8,
+  "model": "issue_tracker.issue",
+  "pk": 62,
   "fields": {
-    "name": "Can view permission",
-    "content_type": 2,
-    "codename": "view_permission"
+    "summary": "agsfdadsgadfadfshdgf",
+    "description": "dfdsh",
+    "status": 2,
+    "created_at": "2023-03-17T09:22:44.495Z",
+    "updated_at": "2023-03-17T09:22:44.495Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 9,
+  "model": "issue_tracker.issue",
+  "pk": 63,
   "fields": {
-    "name": "Can add group",
-    "content_type": 3,
-    "codename": "add_group"
+    "summary": "fgjhg",
+    "description": "fhgkjhg",
+    "status": 1,
+    "created_at": "2023-03-17T09:25:30.480Z",
+    "updated_at": "2023-03-17T09:25:30.490Z",
+    "project": 9,
+    "type": [
+      2
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 10,
+  "model": "issue_tracker.issue",
+  "pk": 64,
   "fields": {
-    "name": "Can change group",
-    "content_type": 3,
-    "codename": "change_group"
+    "summary": "asgfd",
+    "description": "fdgj",
+    "status": 1,
+    "created_at": "2023-03-17T09:26:47.499Z",
+    "updated_at": "2023-03-17T09:26:47.507Z",
+    "project": 9,
+    "type": [
+      2
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 11,
+  "model": "issue_tracker.issue",
+  "pk": 65,
   "fields": {
-    "name": "Can delete group",
-    "content_type": 3,
-    "codename": "delete_group"
+    "summary": "asgfdsadfas",
+    "description": "fdgj",
+    "status": 1,
+    "created_at": "2023-03-17T09:27:03.270Z",
+    "updated_at": "2023-03-17T09:27:03.281Z",
+    "project": 9,
+    "type": [
+      2
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 12,
+  "model": "issue_tracker.issue",
+  "pk": 66,
   "fields": {
-    "name": "Can view group",
-    "content_type": 3,
-    "codename": "view_group"
+    "summary": "asgfdsadfasfgdh",
+    "description": "fdgjdsag",
+    "status": 1,
+    "created_at": "2023-03-17T09:31:51.559Z",
+    "updated_at": "2023-03-17T09:31:51.567Z",
+    "project": 2,
+    "type": [
+      2
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 13,
+  "model": "issue_tracker.issue",
+  "pk": 67,
   "fields": {
-    "name": "Can add user",
-    "content_type": 4,
-    "codename": "add_user"
+    "summary": "hgfjhgk",
+    "description": "jhlhkj;",
+    "status": 1,
+    "created_at": "2023-03-17T09:37:03.451Z",
+    "updated_at": "2023-03-17T09:37:03.455Z",
+    "project": 2,
+    "type": []
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 14,
+  "model": "issue_tracker.issue",
+  "pk": 68,
   "fields": {
-    "name": "Can change user",
-    "content_type": 4,
-    "codename": "change_user"
+    "summary": "dadhfsgjtyj",
+    "description": "tyuky,hkj",
+    "status": 1,
+    "created_at": "2023-03-17T09:37:22.548Z",
+    "updated_at": "2023-03-17T09:37:22.553Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 15,
+  "model": "issue_tracker.issue",
+  "pk": 69,
   "fields": {
-    "name": "Can delete user",
-    "content_type": 4,
-    "codename": "delete_user"
+    "summary": "alibbb",
+    "description": "dsfjgdf",
+    "status": 1,
+    "created_at": "2023-03-17T09:37:54.137Z",
+    "updated_at": "2023-03-17T09:37:54.144Z",
+    "project": 2,
+    "type": [
+      1
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 16,
+  "model": "issue_tracker.issue",
+  "pk": 70,
   "fields": {
-    "name": "Can view user",
-    "content_type": 4,
-    "codename": "view_user"
+    "summary": "gfhjdhfgkg",
+    "description": "gjkhlhjk",
+    "status": 1,
+    "created_at": "2023-03-17T09:38:46.492Z",
+    "updated_at": "2023-03-17T09:38:46.501Z",
+    "project": 9,
+    "type": [
+      2
+    ]
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 17,
+  "model": "issue_tracker.issue",
+  "pk": 72,
   "fields": {
-    "name": "Can add content type",
-    "content_type": 5,
-    "codename": "add_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 18,
-  "fields": {
-    "name": "Can change content type",
-    "content_type": 5,
-    "codename": "change_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 19,
-  "fields": {
-    "name": "Can delete content type",
-    "content_type": 5,
-    "codename": "delete_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 20,
-  "fields": {
-    "name": "Can view content type",
-    "content_type": 5,
-    "codename": "view_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 21,
-  "fields": {
-    "name": "Can add session",
-    "content_type": 6,
-    "codename": "add_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 22,
-  "fields": {
-    "name": "Can change session",
-    "content_type": 6,
-    "codename": "change_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 23,
-  "fields": {
-    "name": "Can delete session",
-    "content_type": 6,
-    "codename": "delete_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 24,
-  "fields": {
-    "name": "Can view session",
-    "content_type": 6,
-    "codename": "view_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add status",
-    "content_type": 7,
-    "codename": "add_status"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change status",
-    "content_type": 7,
-    "codename": "change_status"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
-    "name": "Can delete status",
-    "content_type": 7,
-    "codename": "delete_status"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can view status",
-    "content_type": 7,
-    "codename": "view_status"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can add type",
-    "content_type": 8,
-    "codename": "add_type"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 30,
-  "fields": {
-    "name": "Can change type",
-    "content_type": 8,
-    "codename": "change_type"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 31,
-  "fields": {
-    "name": "Can delete type",
-    "content_type": 8,
-    "codename": "delete_type"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 32,
-  "fields": {
-    "name": "Can view type",
-    "content_type": 8,
-    "codename": "view_type"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 33,
-  "fields": {
-    "name": "Can add issue",
-    "content_type": 9,
-    "codename": "add_issue"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 34,
-  "fields": {
-    "name": "Can change issue",
-    "content_type": 9,
-    "codename": "change_issue"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 35,
-  "fields": {
-    "name": "Can delete issue",
-    "content_type": 9,
-    "codename": "delete_issue"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 36,
-  "fields": {
-    "name": "Can view issue",
-    "content_type": 9,
-    "codename": "view_issue"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 37,
-  "fields": {
-    "name": "Can add project",
-    "content_type": 10,
-    "codename": "add_project"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 38,
-  "fields": {
-    "name": "Can change project",
-    "content_type": 10,
-    "codename": "change_project"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 39,
-  "fields": {
-    "name": "Can delete project",
-    "content_type": 10,
-    "codename": "delete_project"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 40,
-  "fields": {
-    "name": "Can view project",
-    "content_type": 10,
-    "codename": "view_project"
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$390000$ynglila6VDRg03LgZjushb$NU0dGzcZuKQ6bIaHOgW0+raZAY/cOG9tVah6hr/QhAI=",
-    "last_login": "2023-03-03T10:02:50.093Z",
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2023-03-03T10:02:37.132Z",
-    "groups": [],
-    "user_permissions": []
+    "summary": "Hello World",
+    "description": "adasf",
+    "status": 1,
+    "created_at": "2023-03-21T12:08:17.411Z",
+    "updated_at": "2023-03-21T12:08:17.419Z",
+    "project": 11,
+    "type": [
+      2
+    ]
   }
 }
 ]
