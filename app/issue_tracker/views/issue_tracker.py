@@ -61,13 +61,15 @@ class IssueUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
     form_class = IssueForm
     model = Issue
     groups = ['Project Manager', 'Team Lead', 'Developer']
+    permission_required = 'issue_tracker.change_issue'
 
     def get_success_url(self):
         return reverse('project_issue_detail', kwargs={'project_pk': self.object.project.pk, 'pk': self.object.pk})
 
     def test_func(self):
         return self.request.user.groups.filter(
-            name__in=self.groups).exists() and self.request.user in Project.objects.get(id=self.kwargs['project_pk']).user.all()
+            name__in=self.groups).exists() and self.request.user in Project.objects.get(
+            id=self.kwargs['project_pk']).user.all()
 
 
 class IssueAddView(UserPassesTestMixin, LoginRequiredMixin, CreateView):
@@ -75,6 +77,7 @@ class IssueAddView(UserPassesTestMixin, LoginRequiredMixin, CreateView):
     model = Issue
     form_class = IssueForm
     groups = ['Project Manager', 'Team Lead', 'Developer']
+    permission_required = 'issue_tracker.change_issue'
 
     def get(self, request, *args, **kwargs):
         self.project_pk = kwargs['project_pk']
@@ -100,17 +103,20 @@ class IssueAddView(UserPassesTestMixin, LoginRequiredMixin, CreateView):
 
     def test_func(self):
         return self.request.user.groups.filter(
-            name__in=self.groups).exists() and self.request.user in Project.objects.get(id=self.kwargs['project_pk']).user.all()
+            name__in=self.groups).exists() and self.request.user in Project.objects.get(
+            id=self.kwargs['project_pk']).user.all()
 
 
 class IssueDeleteView(UserPassesTestMixin, LoginRequiredMixin, DeleteView):
     template_name = 'issue_delete_page.html'
     model = Issue
     groups = ['Project Manager', 'Team Lead']
+    permission_required = 'issue_tracker.change_issue'
 
     def get_success_url(self):
         return reverse('project_detail', kwargs={'project_pk': self.object.project.pk})
 
     def test_func(self):
         return self.request.user.groups.filter(
-            name__in=self.groups).exists() and self.request.user in Project.objects.get(id=self.kwargs['project_pk']).user.all()
+            name__in=self.groups).exists() and self.request.user in Project.objects.get(
+            id=self.kwargs['project_pk']).user.all()

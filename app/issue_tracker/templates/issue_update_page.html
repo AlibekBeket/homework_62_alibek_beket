@@ -6,7 +6,9 @@
 {% block navbar %}
 <a href="{% url 'project_detail' issue.project.id %}">Issue List</a>
 <a href="{% url 'project_issue_add' issue.pk %}">Add Issue</a>
+{% if porms.issue_tracker.change_issue and request.user in issue.project.user.all %}
 <a href="{% url 'project_issue_delete' issue.project.id issue.pk %}">Delete Issue</a>
+{% endif %}
 {% endblock %}
 {% block content %}
 <h1>Update Issue</h1>

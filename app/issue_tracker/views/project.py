@@ -24,6 +24,7 @@ class ProjectAddView(UserPassesTestMixin, LoginRequiredMixin, CreateView):
     model = Project
     form_class = ProjectForm
     groups = ['Project Manager']
+    permission_required = 'project.change_project'
 
     def get_success_url(self):
         return reverse('projects_list')
@@ -37,6 +38,7 @@ class ProjectDeleteView(UserPassesTestMixin, LoginRequiredMixin, DeleteView):
     model = Project
     success_url = reverse_lazy('projects_list')
     groups = ['Project Manager']
+    permission_required = 'project.change_project'
 
     def test_func(self):
         return self.request.user.groups.filter(name__in=self.groups).exists()
@@ -47,9 +49,11 @@ class ProjectUserUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView)
     model = Project
     form_class = ProjectUserForm
     groups = ['Project Manager', 'Team Lead']
+    permission_required = 'project.change_user'
 
     def get_success_url(self):
         return reverse('projects_list')
 
     def test_func(self):
-        return self.request.user.groups.filter(name__in=self.groups).exists() and self.request.user in self.get_object().user.all()
+        return self.request.user.groups.filter(
+            name__in=self.groups).exists() and self.request.user in self.get_object().user.all()

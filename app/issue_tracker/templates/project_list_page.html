@@ -3,7 +3,9 @@
 {% block navbar %}
 <a href="{% url 'projects_list' %}">Projects List</a>
 {% if user.is_authenticated %}
+{% if porms.project.change_project %}
 <a href="{% url 'project_add' %}">Add Project</a>
+{% endif %}
 {% endif %}
 {% endblock %}
 {% block content %}

@@ -7,8 +7,10 @@
 <a href="{% url 'project_detail' issue.project.id %}">Issue List</a>
 {% if user.is_authenticated %}
 <a href="{% url 'project_issue_add' issue.project.id %}">Add Issue</a>
+{% if porms.issue_tracker.change_issue and request.user in issue.project.user.all %}
 <a href="{% url 'project_issue_update' issue.project.id issue.pk %}">Update Issue</a>
 <a href="{% url 'project_issue_delete' issue.project.id issue.pk %}">Delete Issue</a>
+{% endif %}
 {% endif %}
 {% endblock %}
 {% block content %}
