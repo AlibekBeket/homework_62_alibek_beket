@@ -1,4 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
+from django.shortcuts import redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, DeleteView
 
@@ -26,10 +28,6 @@ class ProjectAddView(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse('projects_list')
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
 
 
 class ProjectDeleteView(LoginRequiredMixin, DeleteView):
