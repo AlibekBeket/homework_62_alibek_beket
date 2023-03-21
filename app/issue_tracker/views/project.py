@@ -1,8 +1,6 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.models import User
-from django.shortcuts import redirect
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse, reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 
 from issue_tracker.models import Project
 
@@ -21,25 +19,37 @@ class ProjectListView(ListView):
         return context
 
 
-class ProjectAddView(LoginRequiredMixin, CreateView):
+class ProjectAddView(UserPassesTestMixin, LoginRequiredMixin, CreateView):
     template_name = 'project_create_page.html'
     model = Project
     form_class = ProjectForm
+    groups = ['Project Manager']
 
     def get_success_url(self):
         return reverse('projects_list')
 
+    def test_func(self):
+        return self.request.user.groups.filter(name__in=self.groups).exists()
 
-class ProjectDeleteView(LoginRequiredMixin, DeleteView):
+
+class ProjectDeleteView(UserPassesTestMixin, LoginRequiredMixin, DeleteView):
     template_name = 'project_delete_page.html'
     model = Project
     success_url = reverse_lazy('projects_list')
+    groups = ['Project Manager']
+
+    def test_func(self):
+        return self.request.user.groups.filter(name__in=self.groups).exists()
 
 
-class ProjectUserUpdateView(LoginRequiredMixin, UpdateView):
+class ProjectUserUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
     template_name = 'project_user_update_page.html'
     model = Project
     form_class = ProjectUserForm
+    groups = ['Project Manager', 'Team Lead']
 
     def get_success_url(self):
         return reverse('projects_list')
+
+    def test_func(self):
+        return self.request.user.groups.filter(name__in=self.groups).exists() and self.request.user in self.get_object().user.all()
