@@ -50,7 +50,7 @@ body{
 }
 .logo{
     font-size: 30px;
-    margin-right: 300px;
+    margin-right: 100px;
 }
 .issue_info{
     border-radius: 20px;
@@ -214,4 +214,7 @@ body{
 .button_login:hover{
     background: DarkSlateGray;
     color: white;
+}
+.users_list{
+    margin-top: 20px;
 }

@@ -14,7 +14,7 @@
 <h1>{{ project.name }}</h1>
 {% block content %}
 <form class="search_form" action="{% url 'project_detail' project.id %}" method="get">
-{% include 'partials/search.html' with button_text="Find" %}
+    {% include 'partials/search.html' with button_text="Find" %}
 </form>
 {% for issue in issues %}
 <div class="issue_info">
@@ -35,5 +35,11 @@
     <p>Задачи не найдены</p>
 </div>
 {% endif %}
+<div class="users_list">
+    <h4>Users in "{{ project.name }}" project</h4>
+    {% for user in project.user.all %}
+    <p>{{ user.username }}</p>
+    {% endfor %}
+</div>
 <div class="bottom_indent"></div>
 {% endblock %}
